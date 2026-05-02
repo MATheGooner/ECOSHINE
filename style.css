@@ -498,6 +498,25 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.service-grid .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-grid .card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green-500), var(--blue));
+  opacity: 0;
+  transition: opacity 0.24s ease;
+}
+
+.service-grid .card:hover::before {
+  opacity: 1;
+}
+
 .card,
 .testimonial {
   padding: 30px;
@@ -525,8 +544,122 @@ h3 {
   border-radius: 8px;
   color: var(--green-900);
   background: linear-gradient(135deg, var(--mint), #eefaf3);
-  font-size: 0.9rem;
-  font-weight: 800;
+  box-shadow: inset 0 0 0 1px rgba(36, 116, 93, 0.08), 0 12px 24px rgba(21, 63, 51, 0.08);
+  transition: transform 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
+}
+
+.card:hover .card-icon {
+  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(135deg, #ecfbf3, #dff5ff);
+  box-shadow: inset 0 0 0 1px rgba(36, 116, 93, 0.14), 0 16px 30px rgba(21, 63, 51, 0.12);
+}
+
+.card-icon,
+.card-icon span {
+  position: relative;
+}
+
+.card-icon span,
+.card-icon span::before,
+.card-icon span::after {
+  display: block;
+  content: "";
+}
+
+.icon-home span {
+  width: 23px;
+  height: 18px;
+  margin-top: 7px;
+  border: 2px solid var(--green-700);
+  border-top: 0;
+  border-radius: 3px 3px 5px 5px;
+}
+
+.icon-home span::before {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: 0;
+  right: 0;
+  top: -10px;
+  margin: auto;
+  border-left: 2px solid var(--green-700);
+  border-top: 2px solid var(--green-700);
+  border-radius: 3px 0 0;
+  transform: rotate(45deg);
+}
+
+.icon-office span {
+  width: 24px;
+  height: 28px;
+  border: 2px solid var(--green-700);
+  border-radius: 4px;
+  background:
+    linear-gradient(var(--green-700), var(--green-700)) 6px 7px / 4px 4px no-repeat,
+    linear-gradient(var(--green-700), var(--green-700)) 14px 7px / 4px 4px no-repeat,
+    linear-gradient(var(--green-700), var(--green-700)) 6px 15px / 4px 4px no-repeat,
+    linear-gradient(var(--green-700), var(--green-700)) 14px 15px / 4px 4px no-repeat;
+}
+
+.icon-deep span {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-deep span::before,
+.icon-deep span::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--green-700);
+  transform: translate(-50%, -50%);
+}
+
+.icon-deep span::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.icon-deep::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: -20px 20px 0 rgba(53, 166, 123, 0.55);
+}
+
+.icon-move span {
+  width: 30px;
+  height: 18px;
+  border-top: 2px solid var(--green-700);
+  border-bottom: 2px solid var(--green-700);
+}
+
+.icon-move span::before,
+.icon-move span::after {
+  position: absolute;
+  top: -5px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--green-700);
+}
+
+.icon-move span::before {
+  left: -1px;
+  border-left: 2px solid var(--green-700);
+  transform: rotate(-45deg);
+}
+
+.icon-move span::after {
+  right: -1px;
+  border-right: 2px solid var(--green-700);
+  transform: rotate(45deg);
 }
 
 .why-us {
