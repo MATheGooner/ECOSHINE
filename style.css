@@ -76,15 +76,78 @@ a {
 }
 
 .brand-mark {
+  position: relative;
   width: 40px;
   height: 40px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--green-700), var(--blue));
-  box-shadow: 0 10px 24px rgba(36, 116, 93, 0.2);
-  font-size: 0.82rem;
+  flex: 0 0 40px;
+  display: inline-block;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(255, 255, 255, 0.95) 0 6%, transparent 7%),
+    linear-gradient(135deg, var(--green-700), var(--blue));
+  box-shadow: 0 12px 26px rgba(36, 116, 93, 0.22);
+  overflow: hidden;
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9px;
+}
+
+.brand-leaf {
+  position: absolute;
+  left: 10px;
+  bottom: 9px;
+  width: 19px;
+  height: 24px;
+  border-radius: 20px 20px 20px 3px;
+  background: linear-gradient(135deg, #ffffff, #dff5ea);
+  transform: rotate(-34deg);
+  box-shadow: 0 5px 12px rgba(21, 63, 51, 0.16);
+}
+
+.brand-leaf::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 4px;
+  width: 2px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(36, 116, 93, 0.46);
+  transform: rotate(8deg);
+}
+
+.brand-shine {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+}
+
+.brand-shine::before,
+.brand-shine::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 999px;
+  background: var(--white);
+  transform: translate(-50%, -50%);
+}
+
+.brand-shine::before {
+  width: 2px;
+  height: 11px;
+}
+
+.brand-shine::after {
+  width: 11px;
+  height: 2px;
 }
 
 .nav-links {
@@ -1015,6 +1078,20 @@ h3 {
   .brand-mark {
     width: 36px;
     height: 36px;
+    flex-basis: 36px;
+    border-radius: 10px;
+  }
+
+  .brand-leaf {
+    left: 9px;
+    bottom: 8px;
+    width: 17px;
+    height: 22px;
+  }
+
+  .brand-shine {
+    right: 7px;
+    top: 7px;
   }
 
   .hero-actions .btn {
