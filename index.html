@@ -10,11 +10,8 @@
   <header class="site-header" id="top">
     <nav class="navbar" aria-label="Primary navigation">
       <a class="brand" href="#hero" aria-label="EcoShine Services home">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="brand-leaf"></span>
-          <span class="brand-shine"></span>
-        </span>
-        <span>EcoShine Services</span>
+        <img src="images/ecoshine-logo.png" alt="EcoShine Services logo" class="brand-logo">
+        <span class="brand-text">EcoShine Services</span>
       </a>
 
       <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
@@ -301,22 +298,58 @@
   </main>
 
   <footer class="footer">
-    <div>
-      <a class="brand" href="#hero">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="brand-leaf"></span>
-          <span class="brand-shine"></span>
-        </span>
-        <span>EcoShine Services</span>
+    <div class="footer-brand">
+      <a class="brand footer-brand-logo" href="#hero" aria-label="EcoShine Services home">
+        <img src="images/ecoshine-logo.png" alt="EcoShine Services logo" class="brand-logo">
+        <span class="brand-text">EcoShine Services</span>
       </a>
       <p>Reliable, eco-friendly cleaning for homes and workplaces.</p>
     </div>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@ecoshineservices.com">hello@ecoshineservices.com</a></li>
+          <li><span>Lagos, Nigeria</span></li>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Social Media</h3>
+        <div class="footer-social-links" aria-label="EcoShine social links">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2H21.5l-7.5 8.57L22 22h-6.828l-5.35-6.998L3.5 22H.244l8.027-9.18L0 2h6.828l4.9 6.49L18.244 2z"/>
+          </svg>
+          </a>
+          <a href="mailto:hello@ecoshineservices.com" aria-label="Email EcoShine">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="M4 7l8 6 8-6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
+
     <p class="copyright">&copy; 2026 EcoShine Services. All rights reserved.</p>
   </footer>
 
