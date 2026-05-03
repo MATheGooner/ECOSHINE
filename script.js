@@ -2,8 +2,6 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const navItems = document.querySelectorAll(".nav-links a");
 const faqItems = document.querySelectorAll(".faq-item");
-const contactForm = document.querySelector(".contact-form");
-const formStatus = document.querySelector(".form-status");
 const revealItems = document.querySelectorAll(
   ".section, .card, .testimonial, .why-item, .faq-item"
 );
@@ -41,13 +39,6 @@ faqItems.forEach((item) => {
 
     question.setAttribute("aria-expanded", String(isOpen));
   });
-});
-
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  formStatus.textContent = "Thanks. Your cleaning request has been received, and we will contact you soon.";
-  contactForm.reset();
 });
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
